@@ -240,3 +240,66 @@ h2{font-size:40px;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:v
   .c-deco{translate:none}
 }
 .nw{white-space:nowrap}
+
+/* широкие коллажи с глазиком перед «Контент как еда» и «А как бы ты поступила?» */
+.chalk-white::after{border-image-source:url('assets/img/chalk-frame-white.webp')}
+.wide{width:min(var(--wide),calc(100% - 48px));margin:96px auto 0}
+.wide-stage{position:relative;aspect-ratio:1040/460}
+.w-card{position:absolute;aspect-ratio:3/2;rotate:var(--rot,0deg);transition:opacity .7s ease,translate .9s cubic-bezier(.2,.8,.2,1),rotate .9s cubic-bezier(.2,.8,.2,1)}
+.w-card img{width:100%;height:100%;object-fit:cover;border-radius:24px}
+.w-card::after{inset:-12px}
+.w-person{position:absolute;bottom:0;height:100%;width:auto;max-width:none;transition:opacity .7s ease .1s,translate 1s cubic-bezier(.2,.8,.2,1) .1s}
+.w-tag{translate:-50% 0}
+.js .reveal-collage:not(.in) .w-card{opacity:0;translate:0 40px;rotate:0deg}
+.js .reveal-collage:not(.in) .w-person{opacity:0;translate:0 8%}
+
+.wide-food .w-arcs{left:1%;top:8%;width:12%}
+.wide-food .w-zigzag{left:60%;top:-6%;width:11%}
+.wide-food .w-flowers{right:2%;top:2%;width:8%}
+.wide-food .w-lightning{left:37%;top:20%;width:5%}
+.wide-food .w-card{--rot:3deg;right:13%;top:9%;width:40%}
+.wide-food .w-person{left:17%}
+.wide-food .w-red{left:0;bottom:14%;width:20%}
+.wide-food .w-paw{left:40%;bottom:6%;width:6%}
+.wide-food .w-eye{right:1%;bottom:0;width:17%}
+.wide-food .w-tag{left:27.5%;bottom:7%}
+
+.wide-after .w-zigzag{left:1%;top:4%;width:10%}
+.wide-after .w-arrow{left:58%;top:3%;width:20%}
+.wide-after .w-flowers{right:2%;top:6%;width:8%}
+.wide-after .w-bluezig{right:2%;top:42%;width:7%}
+.wide-after .w-lightning{left:62%;top:44%;width:5%}
+.wide-after .w-card{--rot:-3deg;left:12%;top:8%;width:48%}
+.wide-after .w-red{left:0;bottom:6%;width:18%}
+.wide-after .w-paw{left:62%;bottom:4%;width:6%}
+.wide-after .w-eye{right:12%;bottom:0;width:26%}
+
+@media (max-width:620px){
+  .wide{width:calc(100% - 32px);margin-top:70px}
+  .wide-stage{aspect-ratio:1/1.1}
+  .w-card img{border-radius:16px}
+  .w-card::after{inset:-9px}
+  .wide-food .w-zigzag{display:none}
+  .wide-food .w-arcs{left:0;top:0;width:22%}
+  .wide-food .w-flowers{right:2%;top:46%;width:14%}
+  .wide-food .w-lightning{left:44%;top:47%;width:9%}
+  .wide-food .w-card{right:0;top:5%;width:60%}
+  .wide-food .w-person{left:0;height:88%}
+  .wide-food .w-red{left:0;bottom:18%;width:34%}
+  .wide-food .w-paw{left:48%;bottom:7%;width:12%}
+  .wide-food .w-eye{right:0;width:36%}
+  .wide-food .w-tag{left:23%;bottom:5%}
+
+  .wide-after .w-arrow{display:none}
+  .wide-after .w-zigzag{left:auto;right:2%;top:0;width:18%}
+  .wide-after .w-card{left:0;top:7%;width:84%}
+  .wide-after .w-flowers{left:6%;right:auto;top:66%;width:15%}
+  .wide-after .w-bluezig{right:auto;left:30%;top:63%;width:11%}
+  .wide-after .w-lightning{display:none}
+  .wide-after .w-red{left:0;bottom:6%;width:40%}
+  .wide-after .w-paw{left:42%;bottom:3%;width:12%}
+  .wide-after .w-eye{right:0;width:46%}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal-collage:not(.in) .w-card,.js .reveal-collage:not(.in) .w-person{opacity:1;translate:none;rotate:var(--rot,0deg)}
+}

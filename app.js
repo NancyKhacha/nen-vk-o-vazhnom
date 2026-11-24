@@ -22,7 +22,7 @@
   var strip = document.querySelector('[data-strip]');
   var track = strip && strip.querySelector('.strip-track');
   var photos = document.querySelectorAll('[data-parallax]');
-  var collage = document.querySelector('[data-collage]');
+  var collages = document.querySelectorAll('[data-collage]');
   var ticking = false;
 
   function progress(el, vh) {
@@ -48,10 +48,10 @@
       if (q.r.bottom < 0 || q.r.top > vh) return;
       p.style.setProperty('--py', (-12 * q.t).toFixed(2) + '%');
     });
-    if (collage) {
-      var c = progress(collage, vh);
-      if (c.r.bottom > 0 && c.r.top < vh) collage.style.setProperty('--cp', (c.t * 2 - 1).toFixed(3));
-    }
+    collages.forEach(function (el) {
+      var c = progress(el, vh);
+      if (c.r.bottom > 0 && c.r.top < vh) el.style.setProperty('--cp', (c.t * 2 - 1).toFixed(3));
+    });
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', onScroll, { passive: true });
