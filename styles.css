@@ -69,20 +69,20 @@ h1{font-size:58px;font-weight:600;line-height:1.04;letter-spacing:-.03em;color:v
 h2{font-size:40px;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--white);margin:0 0 30px;text-wrap:balance}
 
 /* коллаж с Василисой */
-.collage{width:min(900px,calc(100% - 48px));margin:72px auto 0}
-.collage-stage{position:relative;aspect-ratio:4/3}
-.collage-card{position:absolute;left:15%;right:15%;top:25%;bottom:14px}
+.collage{width:min(800px,calc(100% - 48px));margin:72px auto 0}
+.collage-stage{position:relative;aspect-ratio:3/2}
+.collage-card{position:absolute;left:18%;right:18%;top:22%;bottom:14px}
 .collage-card::after{inset:-14px}
 .collage-person{position:absolute;bottom:0;left:50%;height:100%;width:auto;max-width:none;translate:-50% 0;transition:translate 1s cubic-bezier(.2,.8,.2,1),opacity .7s ease}
 .c-deco{position:absolute;max-width:none;height:auto;translate:0 calc(var(--cp,0) * var(--d,0) * 1px);transition:opacity .5s ease,scale .7s cubic-bezier(.3,1.5,.5,1),rotate .7s cubic-bezier(.3,1.5,.5,1)}
-.c-arcs{left:0;top:30%;width:15%}
-.c-zigzag{left:10%;top:3%;width:16%}
-.c-flowers{right:11%;top:2%;width:13%}
-.c-lightning{right:25%;top:15%;width:8.5%}
-.c-arrow{right:0;top:42%;width:26%}
-.c-red{left:0;top:63%;width:31%}
-.c-paw{left:18%;bottom:6%;width:10%}
-.c-eyeball{right:6%;bottom:-2%;width:18%}
+.c-arcs{left:3%;top:26%;width:13%}
+.c-zigzag{left:12%;top:2%;width:13%}
+.c-flowers{right:12%;top:1%;width:10%}
+.c-lightning{right:27%;top:12%;width:7%}
+.c-arrow{right:1%;top:40%;width:24%}
+.c-red{left:0;top:62%;width:28%}
+.c-paw{left:22%;bottom:6%;width:8%}
+.c-eyeball{right:9%;bottom:-2%;width:17%}
 .collage-tag{position:absolute;left:50%;bottom:7%;translate:-50% 0;rotate:-4deg;white-space:nowrap;padding:12px 26px 14px;background:url('assets/img/chalk-tag-red.webp') center/100% 100% no-repeat;color:#fff;font-size:24px;font-weight:600;line-height:1;transition:scale .6s cubic-bezier(.3,1.5,.5,1) .5s,opacity .4s ease .5s}
 .js .reveal-collage:not(.in) .collage-person{translate:-50% 7%;opacity:0}
 .js .reveal-collage:not(.in) .c-deco{opacity:0;scale:.3;rotate:-25deg}
@@ -199,17 +199,10 @@ h2{font-size:40px;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:v
   .strip-track img{width:250px;border-radius:14px}
 
   .collage{width:calc(100% - 32px);margin-top:56px}
-  .collage-stage{aspect-ratio:1/1.12}
-  .collage-card{left:7%;right:7%;top:24%;border-radius:26px}
-  .c-arcs{left:0;top:27%;width:19%}
-  .c-zigzag{left:1%;top:5%;width:23%}
-  .c-flowers{right:2%;top:4%;width:19%}
-  .c-lightning{right:12%;top:27%;width:12%}
-  .c-arrow{right:0;top:48%;width:28%}
-  .c-red{left:0;top:66%;width:34%}
-  .c-paw{left:10%;bottom:4%;width:14%}
-  .c-eyeball{right:1%;bottom:-2%;width:27%}
-  .collage-tag{font-size:17px;padding:10px 18px 11px;bottom:6%}
+  .collage-card{left:15%;right:15%}
+  .collage-card::after{inset:-11px}
+  .c-eyeball{right:6%;width:20%}
+  .collage-tag{font-size:14px;padding:8px 13px 9px;bottom:6%}
 
   .quote{padding-left:20px;margin:30px 0 32px}
   .quote figcaption{gap:12px}
