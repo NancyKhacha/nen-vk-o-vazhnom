@@ -297,3 +297,11 @@ h2{font-size:40px;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:v
 @media (prefers-reduced-motion:reduce){
   .js .reveal-collage:not(.in) .w-card,.js .reveal-collage:not(.in) .w-person{opacity:1;translate:none;rotate:var(--rot,0deg)}
 }
+
+/* H2 — поисковый запрос маленькой строкой; под ним крупно одобренная игровая фраза (не заголовок, чтобы не мешать SEO) */
+h2.seo-h2{margin:0 0 10px;font-size:18px;font-weight:600;line-height:1.35;letter-spacing:.005em;color:var(--sky);text-wrap:pretty}
+.h2-big{margin:0 0 30px!important;font-size:40px;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--white);text-wrap:balance}
+@media (max-width:620px){
+  h2.seo-h2{font-size:15px;margin-bottom:8px}
+  .h2-big{font-size:28px;line-height:1.15;margin-bottom:22px!important}
+}
